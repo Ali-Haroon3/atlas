@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>2020 Proposal Form – Accessible Version</title>
+  <link rel="stylesheet" href="css/form.css">
+</head>
+
+<body>
+  <h1>2020 Proposal Form</h1>
+
+  <form action="#" method="post" id="proposal2020">
+
+    <!-- ========== Speaker Info ======================================= -->
+    <fieldset id="speakerInfo">
+      <legend>Speaker Info</legend>
+      <ul id="formCol1">
+        <li>
+          <label for="fstSpkr1">First Name:<span class="required">*</span></label>
+          <input id="fstSpkr1" name="fstSpkr1" type="text" class="reqField" autocomplete="given-name">
+        </li>
+        <li>
+          <label for="lstName1">Last Name:<span class="required">*</span></label>
+          <input id="lstName1" name="lstName1" type="text" class="reqField" autocomplete="family-name">
+        </li>
+        <li>
+          <label for="spkrTitle1">Title:</label>
+          <input id="spkrTitle1" name="spkrTitle1" type="text" maxlength="48">
+        </li>
+        <li>
+          <label for="company1">Company:</label>
+          <input id="company1" name="company1" type="text">
+        </li>
+        <li>
+          <label for="department1">Department:</label>
+          <input id="department1" name="department1" type="text">
+        </li>
+        <li>
+          <label for="address1">Address:<span class="required">*</span></label>
+          <input id="address1" name="address1" type="text" class="reqField">
+        </li>
+      </ul>
+    </fieldset>
+
+    <!-- ========== Presentation Type ================================== -->
+    <fieldset id="presentationType">
+      <legend>Type of Presentation</legend>
+      <p class="radioRow">
+        <input value="lecture" id="typeOfPresLec" name="presentationType" type="radio">
+        <label for="typeOfPresLec">Lecture</label>
+
+        <input value="lab" id="typeOfPresLab" name="presentationType" type="radio">
+        <label for="typeOfPresLab">Computer Lab</label>
+      </p>
+    </fieldset>
+
+    <p class="instructions"><span class="required">*</span> indicates a required field.</p>
+
+    <p class="submitRow"><button type="submit">Submit your proposal</button></p>
+  </form>
+</body>
+</html>

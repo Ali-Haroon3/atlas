@@ -1,0 +1,90 @@
+/* ==============================  css/form.css  ============================== */
+@charset "UTF-8";
+
+/* ---- Container --------------------------------------------------------- */
+#wrapper{
+  width:60%;
+  margin-left:4%;
+}
+
+/* ---- List layout cleanup ---------------------------------------------- */
+#formCol1 li{
+  list-style:none;
+  margin-bottom:0.6em;
+}
+
+/* ---- Labels: fixed width, right aligned -------------------------------- */
+label{
+  margin-right:0.3em;
+  width:8em;
+  display:inline-block;
+  text-align:right;
+}
+
+/* ---- Required-field cues ---------------------------------------------- */
+.required{ color:#b30000; }
+input.reqField{ background:#fff8cc; }
+
+/* ---- Fieldset framing -------------------------------------------------- */
+fieldset{
+  margin-bottom:1.5em;
+  border:2px solid #063060;
+  padding:1em 1.5em;
+  border-radius:4px;
+}
+legend{
+  font-weight:bold;
+  color:#063060;
+  padding:0 0.3em;
+}
+
+/* ---- Radio-button row -------------------------------------------------- */
+/* --- tighten radio-button spacing ----------------------------------- */
+/* --- radio row layout -------------------------------------------------- */
+.radioRow{
+  display:flex;          /* keeps the pairings on one line            */
+  align-items:center;
+  column-gap:1em;        /* space between “Lecture” and “Computer Lab”*/
+}
+
+/* --- override the 8-em label width just for this row ------------------ */
+.radioRow label{
+  width:auto;            /* cancel the global 8 em width              */
+  text-align:left;       /* don’t right-align radio labels            */
+  margin-right:0.4em;    /* tiny breathing room after the button      */
+}
+
+/* --- trim the button’s own margin ------------------------------------- */
+.radioRow input[type="radio"]{
+  margin-right:0.25em;   /* space between button and its label        */
+}
+
+/* ---- High-visibility keyboard focus ----------------------------------- */
+select:focus,select:active,
+input:focus,input:active,
+input:focus+label,input:active+label,
+label[for]:focus,label[for]:active{
+  color:#ffffff !important;
+  background-color:#bb3d2f !important;
+  outline:3px solid #bb3d2f;
+}
+
+/* ---- Submit button ----------------------------------------------------- */
+button{
+  padding:0.6em 1.2em;
+  font-size:1rem;
+  background:#063060;
+  color:#ffffff;
+  border:none;
+  border-radius:4px;
+  cursor:pointer;
+}
+button:hover,
+button:focus{ background:#042042; }
+
+/* ---- Instruction text -------------------------------------------------- */
+.instructions{
+  font-style:italic;
+  margin-top:-0.6em;
+  margin-bottom:1.4em;
+}
