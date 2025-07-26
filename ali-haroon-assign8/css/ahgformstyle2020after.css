@@ -1,0 +1,98 @@
+/* AHG Proposal Form – after-remediation styles */
+:root {
+  --font-body: "Lora", Georgia, serif;
+  --color-text: #111;
+  --color-bg:   #fff;
+  --color-primary: #063060;
+  --color-focus-ring: #03c;
+  --color-focus-bg:  #fff2a8;
+  --color-focus-text: #bf1722;
+}
+
+/* Reset-esque helpers */
+* { box-sizing: border-box; }
+
+/* Base */
+body {
+  margin: 0;
+  font: 1rem/1.5 var(--font-body);
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+/* Layout containers */
+header, main, footer {
+  max-width: 54rem;
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+}
+
+/* Headings & misc text */
+h1 { margin: 0 0 .25rem; font-size: 1.75rem; }
+.conf-details { color: #444; }
+.instructions {
+  background: #e8f4ff;
+  border-left: 4px solid var(--color-primary);
+  padding: .75rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Utility */
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.req-indicator   { color: var(--color-focus-text); }
+.char-limit      { font-size: .875rem; color: #555; }
+
+/* Form base */
+form          { display: flex; flex-direction: column; gap: 1.5rem; }
+fieldset      { border: 2px solid var(--color-primary); border-radius: .5rem; padding: 1rem 1rem 1.5rem; }
+legend        { font-weight: 700; color: var(--color-primary); }
+.form-row     { display: flex; flex-direction: column; margin: .75rem 0; }
+label         { font-weight: 600; margin-bottom: .25rem; }
+input, textarea, select {
+  width: 100%;
+  padding: .45rem .55rem;
+  font: inherit;
+  border: 1px solid #444;
+  border-radius: .25rem;
+}
+input:required, textarea:required { border-left: 4px solid var(--color-focus-text); }
+
+/* Focus ring & colors */
+input:focus, textarea:focus, select:focus,
+button:focus, [type="radio"]:focus {
+  outline: 3px solid var(--color-focus-ring);
+  background: var(--color-focus-bg);
+  color: var(--color-focus-text);
+}
+
+/* Radio group */
+.radio-group { display: flex; gap: 2rem; margin: .75rem 0; }
+.radio-group legend { margin-bottom: .5rem; }
+
+/* Submit button */
+button[type="submit"] {
+  align-self: flex-start;
+  background: var(--color-primary);
+  color: #fff;
+  padding: .75rem 1.25rem;
+  border: none;
+  border-radius: .375rem;
+  cursor: pointer;
+}
+button[type="submit"]:hover,
+button[type="submit"]:focus { background: #04244b; }
+
+/* Responsive tweaks */
+@media (min-width: 40rem) {
+  .form-row { flex-direction: row; align-items: center; gap: 1rem; }
+  .form-row label { flex: 0 0 14rem; margin-bottom: 0; text-align: right; }
+  .form-row input, .form-row textarea, .form-row select { flex: 1 1 0; }
+}

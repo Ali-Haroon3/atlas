@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AHG 2020 | Presenter Proposal Form</title>
+
+  <!-- Type & styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/ahgformstyle2020after.css">
+</head>
+
+<body>
+<header>
+  <h1>AHG Presenter Proposal Form 2020</h1>
+  <p class="conf-details">
+    Accessing Higher Ground: Accessible Web, Media &amp; Technology Conference — Nov 16–20 2020
+  </p>
+</header>
+
+<main>
+  <p class="instructions">
+    <strong>Heads-up:</strong> fields marked with
+    <span class="req-indicator" aria-hidden="true">*</span> are required.
+    Use <kbd>Tab</kbd> to move forward, <kbd>Shift + Tab</kbd> to move back.
+  </p>
+
+  <form id="AHGproposalform2020"
+        action="AHG_saveprop2020.php"
+        method="post"
+        novalidate>
+
+    <!-- Speaker block -->
+    <fieldset>
+      <legend>Speaker 1 <span class="req-indicator" aria-hidden="true">*</span></legend>
+
+      <div class="form-row">
+        <label for="fstspkr1">First&nbsp;Name<span class="visually-hidden"> (required)</span></label>
+        <input id="fstspkr1" name="fstspkr1" type="text" required aria-required="true">
+      </div>
+
+      <div class="form-row">
+        <label for="lstname1">Last&nbsp;Name<span class="visually-hidden"> (required)</span></label>
+        <input id="lstname1" name="lstname1" type="text" required aria-required="true">
+      </div>
+
+      <div class="form-row">
+        <label for="degree1">Highest&nbsp;Academic&nbsp;Degree<span class="visually-hidden"> (required)</span></label>
+        <input id="degree1" name="degree1" type="text" required aria-required="true">
+      </div>
+
+      <div class="form-row">
+        <label for="company1">Institution&nbsp;/&nbsp;Organization</label>
+        <input id="company1" name="company1" type="text">
+      </div>
+
+      <div class="form-row">
+        <label for="telno1">Phone&nbsp;Number<span class="visually-hidden"> (required)</span></label>
+        <input id="telno1"
+               name="telno1"
+               type="tel"
+               pattern="[0-9\\-+()\\s]{7,15}"
+               required
+               aria-required="true">
+      </div>
+
+      <div class="form-row">
+        <label for="email1">E-mail<span class="visually-hidden"> (required)</span></label>
+        <input id="email1" name="email1" type="email" required aria-required="true">
+      </div>
+
+      <fieldset class="radio-group">
+        <legend>Have you presented at a national conference or taught a semester-long college course?<span class="visually-hidden"> (required)</span></legend>
+        <label><input type="radio" id="natconfexp1_yes" name="natconfexp1" value="yes" required aria-required="true"> Yes</label>
+        <label><input type="radio" id="natconfexp1_no"  name="natconfexp1" value="no">  No</label>
+      </fieldset>
+
+      <div class="form-row">
+        <label for="Speaker1bio">
+          Presenter&nbsp;Bio&nbsp;<span class="char-limit">(1500 chars max)</span>
+        </label>
+        <textarea id="Speaker1bio"
+                  name="Speaker1bio"
+                  cols="80"
+                  rows="6"
+                  minlength="50"
+                  maxlength="1500"></textarea>
+      </div>
+    </fieldset>
+
+    <!-- Proposal block -->
+    <fieldset>
+      <legend>Proposal Information</legend>
+      <div class="form-row">
+        <label for="proptitle">
+          Title&nbsp;of&nbsp;Proposal <span class="req-indicator" aria-hidden="true">*</span>
+        </label>
+        <input id="proptitle"
+               name="proptitle"
+               type="text"
+               minlength="10"
+               maxlength="150"
+               required
+               aria-required="true">
+      </div>
+    </fieldset>
+
+    <button type="submit">Submit your proposal</button>
+  </form>
+</main>
+
+<footer>
+  <p><small>&copy; 2020 Accessing Higher Ground</small></p>
+</footer>
+</body>
+</html>
